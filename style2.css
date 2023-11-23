@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #3498db; /* Bright blue background */
+    background-color: #1a1a1a;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@ body {
   
   h1 {
     font-family: 'Indie Flower', cursive;
-    color: #ffcc00; /* Yellowish heading */
+    color: #ffcc00;
   }
   
   input {
@@ -27,7 +27,7 @@ body {
   button {
     padding: 10px;
     margin-top: 10px;
-    background-color: #ffcc00; /* Yellow button */
+    background-color: #ffcc00;
     color: #1a1a1a;
     border: none;
     cursor: pointer;
@@ -35,7 +35,7 @@ body {
   }
   
   button:hover {
-    background-color: #e6b800; /* Darker yellow on hover */
+    background-color: #e6b800;
   }
   
   .hints-container {
@@ -63,11 +63,11 @@ body {
   }
   
   .guess-container button.correct {
-    background-color: #4caf50; /* Green for correct guesses */
+    background-color: #4caf50;
   }
   
   .guess-container button.wrong {
-    background-color: #f44336; /* Red for wrong guesses */
+    background-color: #f44336;
   }
   
   .popup {
@@ -155,8 +155,6 @@ body {
     z-index: 1;
     text-align: center;
     color: #333;
-    pointer-events: auto;
-    
   }
   
   .settings-option {

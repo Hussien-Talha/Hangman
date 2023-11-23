@@ -4,22 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cool Hangman Game</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" id="gameStyle" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>Cool Hangman Game 🎩</h1>
     <!-- Inside index.html -->
-<div id="hangman">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-      <circle class="head" cx="50" cy="25" r="15"/>
-      <line class="body" x1="50" y1="40" x2="50" y2="70"/>
-      <line class="left-arm" x1="50" y1="50" x2="40" y2="60"/>
-      <line class="right-arm" x1="50" y1="50" x2="60" y2="60"/>
-      <line class="left-leg" x1="50" y1="70" x2="45" y2="80"/>
-      <line class="right-leg" x1="50" y1="70" x2="55" y2="80"/>
-    </svg>
-  </div>  
     <div id="hints-container" class="hints-container"></div>
     <div id="word-container" class="word-container"></div>
     <div id="guess-container" class="guess-container"></div>
@@ -27,6 +17,25 @@
     <button onclick="guessLetter()">Guess</button>
   </div>
 
+  <button id="settingsButton" onclick="toggleSettings()">⚙️</button>
+
+  <div id="settingsPopup" class="settings-popup">
+    <div class="settings-option" onclick="changeStyle()">Change Style</div>
+    <div class="settings-option" onclick="showPopup()">About</div>
+    <!-- Add more settings options as needed -->
+  </div>
+
+  <!-- Popup code -->
+  <div id="popup" class="popup">
+    <p>Created by Hussien Talha 2023 ©</p>
+    <p>My website:</p>
+    <button onclick="Website()">Click Here</button>
+  </div>
+
+  <div id="overlay" class="overlay"></div>
+
   <script src="hangman.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
