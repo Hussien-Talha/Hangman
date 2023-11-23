@@ -4,17 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cool Hangman Game</title>
-  <link rel="stylesheet" id="gameStyle" href="style.css">
+  <link rel="stylesheet" id="gameStyle" href="style-dark.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Cool Hangman Game 🎩</h1>
-    <!-- Inside index.html -->
-    <div id="hints-container" class="hints-container"></div>
-    <div id="word-container" class="word-container"></div>
-    <div id="guess-container" class="guess-container"></div>
-    <input type="text" id="letter-input" placeholder="Enter a letter" />
-    <button onclick="guessLetter()">Guess</button>
+  <div class="title-screen">
+    <h1>Welcome to Hangman Adventure! 🎩</h1>
+    <p>Are you ready for a word-guessing challenge?</p>
+    <button onclick="startGame()">Start Game</button>
   </div>
 
   <button id="settingsButton" onclick="toggleSettings()">⚙️</button>
@@ -24,18 +20,37 @@
     <div class="settings-option" onclick="showPopup()">About</div>
     <!-- Add more settings options as needed -->
   </div>
+  
+  <script>
+    function startGame() {
+  window.location.href = 'Game.html';
+}
 
-  <!-- Popup code -->
-  <div id="popup" class="popup">
-    <p>Created by Hussien Talha 2023 ©</p>
-    <p>My website:</p>
-    <button onclick="Website()">Click Here</button>
-  </div>
+function showPopup() {
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+  
+    if (popup.style.display === 'none' || popup.style.display === '') {
+      // Show the popup and overlay
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+    } else {
+      // Hide the popup and overlay
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+  }
 
-  <div id="overlay" class="overlay"></div>
+  function toggleSettings() {
+    const settingsPopup = document.getElementById('settingsPopup');
+    settingsPopup.style.display = settingsPopup.style.display === 'none' ? 'block' : 'none';
+  }
+  
+  function changeStyle() {
+    const styleLink = document.getElementById('gameStyle');
+    styleLink.href = styleLink.href.includes('style-bright.css') ? 'style-dark.css' : 'style-bright.css';
+}
 
-  <script src="hangman.js"></script>
-
-  <script src="script.js"></script>
+</script>
 </body>
 </html>
